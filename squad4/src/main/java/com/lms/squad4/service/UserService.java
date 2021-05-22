@@ -1,9 +1,11 @@
 package com.lms.squad4.service;
 
-import com.lms.squad4.entity.Users;
+import java.util.List;
+
+import com.lms.squad4.entity.Books;
 
 public interface UserService {
 
 	String login(Integer userId,String password); 
-	Users findBookDetailByBookId(Integer bookId);
+	List<Books> findBooksByUserId(Integer userId);
 }
