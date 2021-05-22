@@ -19,10 +19,34 @@ import lombok.Setter;
 public class Role {
 	
 	@Id
-	@Column(name="role_id",nullable=false, updatable=false)
+	@Column(name="RoleId",nullable=false, updatable=false)
 	private long roleId;
 	
-	@Column(name="user_name",nullable=false,length=20)
+	@Column(name="RoleName",nullable=false,length=20)
 	private String roleName;
+
+	public long getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(long roleId) {
+		this.roleId = roleId;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+	@Override
+	public String toString() {
+		return "Role [roleId=" + roleId + ", " + (roleName != null ? "roleName=" + roleName : "") + "]";
+	}
+	
+	
+	
 	
 }

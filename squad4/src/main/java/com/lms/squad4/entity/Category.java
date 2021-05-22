@@ -22,11 +22,33 @@ import lombok.Setter;
 public class Category {
 	
 	@Id
-	@Column(name="category_id",nullable=false, updatable=false)
+	@Column(name="CategoryId",nullable=false, updatable=false)
 	private long categoryId;
 	
-	@Column(name="category_name",nullable=false,length=50)
+	@Column(name="CategoryName",nullable=false,length=50)
 	private String categoryName;
+
+	public long getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(long categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	@Override
+	public String toString() {
+		return "Category [categoryId=" + categoryId + ", "
+				+ (categoryName != null ? "categoryName=" + categoryName : "") + "]";
+	}
 	
 	
 	

@@ -3,11 +3,9 @@ package com.lms.squad4.serviceImpl;
 import java.awt.print.Book;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
 
 import com.lms.squad4.service.BookService;
 
-@Service
 public class BookServiceImpl implements BookService{
 
 	@Override

@@ -20,23 +20,51 @@ import lombok.Setter;
 @Table(name = "books")
 @Data
 public class Books {
-	
-	
+
 	@Id
-	@Column(name="id",nullable=false, updatable=false)
+	@Column(name = "BookId", nullable = false, updatable = false)
 	private long bookId;
-	
-	@Column(name="title",nullable=false,length=20)
+
+	@Column(name = "Title", nullable = false, length = 20)
 	private String title;
-	
-	@Column(name="author",nullable=false,length=20)
+
+	@Column(name = "Author", nullable = false, length = 20)
 	private String author;
-	
 
 	@OneToOne(optional = false)
-	@JoinColumn(name = "category_id")
+	@JoinColumn(name = "CategoryId")
 	private Category categoryId;
 
-	
-	
+	public long getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(long bookId) {
+		this.bookId = bookId;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public Category getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Category categoryId) {
+		this.categoryId = categoryId;
+	}
+
 }
